@@ -1,4 +1,4 @@
-# Pangenomic Identification of Pathogenic Factors
+# Pangenomic Identification of Staphylococcus aureus Pathogenic Factors
 
 ## Goal
 Defining the clinically relevant elements of the pangenome of Staphylococcus aureus and other pathogenic bacteria.
