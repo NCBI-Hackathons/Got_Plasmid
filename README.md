@@ -1,12 +1,14 @@
 # Pangenomic Identification of Pathogenic Factors
 
 ## Goal
-Defining the clinically relevant elements of the pangenome of Staphylococcus aureus and other pathogenic bacteria.   Challenge: mobile genetic elements are ambiguous as repeats, phages, plasmids, etc
+Defining the clinically relevant elements of the pangenome of Staphylococcus aureus and other pathogenic bacteria.
+Challenge: mobile genetic elements are ambiguous as rich in repeats and low complexity elements.
 
- Identification of unique accessory elements in individual patient samples
-Differentiation between screening (nose swabs) and lesions
-Building a rapid pipeline to differentiate between phage, plasmid and low complexity regions in these differential sites.  
-Extending that to other bacterial species
+AIMS:
+- Identification of unique accessory elements in individual patient samples
+- Differentiation between screening (nose swabs) and lesions
+- Building a rapid pipeline to differentiate between phage, plasmid and low complexity regions in these differential sites.  
+- Extending that to other bacterial species
 
 ## Backgound and Significance
 ### Staphylococcus aureus genomes and mobile genetic elements (MGE).
@@ -17,10 +19,10 @@ Extending that to other bacterial species
 ### Why study S. aureus MGE diversity?
  MGE discovery and characterization are important goals for clinical genomics analysis because almost all S. aureus strains harbor several MGE with potentially syndrome- and tissue-specific functions. 
  
-### MGE diversity in NCBI 
+### MGE diversity in NCBI.
  As of August 2017,  327 unique plasmid and 87 phage sequences have been identified and deposited in the US National Center for Biotechnology and Information (NCBI) database.  With the ease and speed of whiole genome sequencing, new MGE are discovered everyday, highlighting the impressive breadth of S. aureus MGE diversity.
 
-### The challenge to study MGE diversity in NCBI 
+### The challenge to study MGE diversity. 
  The extent and importance of MGE contribution to S. aureus pathogenesis is largely under-appreciated. This is mainly due to the complications inherent to their identification, analysis and characterization. 
  
  MGE  are highly repetitive. High level of sequence identity facilitates genetic recombination and contributes to the emergence of mosaic MGE. As such, MGE are ever-changing and can be hard to identify. Moreover, nomenclature in public databases is constantly evolving and inconsistency in annotation among MGE is common and complicates functional inter- and intra-species analyses. 
