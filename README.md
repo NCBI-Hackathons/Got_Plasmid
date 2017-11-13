@@ -26,7 +26,15 @@ AIMS:
  The extent and importance of MGE contribution to S. aureus pathogenesis is largely under-appreciated. This is mainly due to the complications inherent to their identification, analysis and characterization. 
  
 MGE are highly repetitive. High level of sequence identity facilitates genetic recombination and contributes to the emergence of mosaic MGE. As such, MGE are ever-changing and can be hard to identify. Moreover, nomenclature in public databases is constantly evolving and inconsistency in annotation among MGE is common and complicates functional inter- and intra-species analyses. 
-	
+
+## Dependencies:
+* R
+* R packages (data.table, rowr, GenomicRanges, IRanges, stringr, ggplot2)
+* BWA (Burrows-Wheeler Alignment Tool)
+* SamTools
+* GATK (Genome Analysis Toolkit)
+* Velvet
+* BLAST
 
 
 ## WorkFlow
