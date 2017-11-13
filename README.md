@@ -20,7 +20,7 @@ AIMS:
  MGE discovery and characterization are important goals for clinical genomics analysis because almost all S. aureus strains harbor several MGE with potentially syndrome- and tissue-specific functions. 
  
 ### MGE diversity in NCBI.
- As of August 2017,  327 unique plasmid and 87 phage sequences have been identified and deposited in the US National Center for Biotechnology and Information (NCBI) database.  With the ease and speed of whiole genome sequencing, new MGE are discovered everyday, highlighting the impressive breadth of S. aureus MGE diversity.
+ As of August 2017,  327 unique plasmid and 87 phage sequences have been identified and deposited in the US National Center for Biotechnology and Information (NCBI) database.  With the ease and speed of whhole genome sequencing, new MGE are discovered everyday, highlighting the impressive breadth of S. aureus MGE diversity.
 
 ### The challenge to study MGE diversity. 
  The extent and importance of MGE contribution to S. aureus pathogenesis is largely under-appreciated. This is mainly due to the complications inherent to their identification, analysis and characterization. 
