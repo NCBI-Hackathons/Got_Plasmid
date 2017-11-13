@@ -7,7 +7,7 @@ Challenge: mobile genetic elements are ambiguous as rich in repeats and low comp
 AIMS:
 - Identification of unique accessory elements in individual patient samples
 - Differentiation between screening (nose swabs) and lesions
-- Building a rapid pipeline to differentiate between phage, plasmid and low complexity regions in these differential sites.  
+- Building a rapid pipeline to differentiate between phages, plasmids and low complexity regions in these differential sites.  
 - Extending that to other bacterial species
 
 ## Backgound and Significance
