@@ -10,3 +10,4 @@ Extending that to other bacterial species
 
 
 ## WorkFlow
+![My image](https://github.com/Rickcopin/Pathogenic_Pangenomes/blob/master/Images/approaches.png)
