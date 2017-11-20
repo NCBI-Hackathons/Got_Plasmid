@@ -39,4 +39,4 @@ MGE are highly repetitive. High level of sequence identity facilitates genetic r
 
 
 ## WorkFlow
-![My image](https://github.com/Rickcopin/Pathogenic_Pangenomes/blob/master/images/approaches.png)
+![My image](https://github.com/Rickcopin/Pathogenic_Pangenomes/blob/master/images/workflow.png)
