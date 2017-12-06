@@ -35,6 +35,21 @@ Plasmid are rich in repetitive sequences. High level of sequence identity facili
 * magicBlast
 * eUtils
 
+### Steps 
 
+ 1.  Shell_Script_1: retreive gapless S. aureus genomic sequences
+ 2.  Shell_Script_2: retreive gff files associated to gapless S. aureus genomic sequences 
+ 3.  R_script_1: generate extra_plasmids.fasta and gapless_genomes.fasta and individual extra plasmid fasta
+ 4.  Shell_Script_3: retreive plasmid fasta and create S_aureus_all_plasmids.fasta
+ 5.  cat extra_plasmids.fasta >> S_aureus_all_plasmids.fasta
+ 6.  Shell_Script_4: makeblastdb from individual plasmid sequence
+ 7.  Shell_Script_5: makeblastdb from all plasmid sequences
+ 8.  Shell_Script_6: makeblastdb from gapless genome sequences
+ 9.  Shell_Script_7 magicBlast: one SRRA versus individual plasmid databases
+ 10. R_script_2: create got_plamid.csv table and contig files
+ 11. Shell_script_8: BLAST contigs against gapless genome database
+ 12. R_script_3: identify contigs with matches in gapless genomes
+ 
+ 
 ## WorkFlow
 ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/workflow_2.png)
