@@ -39,16 +39,8 @@ Plasmid are rich in repetitive sequences. High level of sequence identity facili
 
 ### Setup
 Setup analysis enviroment:
- - `mkdir -p got_plasmid`
- - `cd got_plasmid`
- - `mkdir -p blast_output`
- - `mkdir -p contig_fasta`
- - `mkdir -p file_names`
- - `mkdir -p genome_fasta`
- - `mkdir -p gff3_files`
- - `mkdir -p magic_output`
- - `mkdir -p plasmid_fasta`
- - `mkdir -p resut_tables`
+ - `git clone https://github.com/NCBI-Hackathons/EndoVir.git`
+
 
 ### Steps 
 
