@@ -46,7 +46,7 @@ Setup analysis enviroment:
 
  1.  Shell_Script_1: retreive gapless S. aureus genomic sequences
  2.  Shell_Script_2: retreive gff files associated to gapless S. aureus genomic sequences 
- 3.  R_script_1: generate extra_plasmids.fasta and gapless_genomes.fasta and individual extra plasmid fasta
+ 3.  Rscript1_split_genome_from_plasmid_sequences_git.R retreive plasmid sequence embedded in fasta files
  4.  Shell_Script_3: retreive plasmid fasta and create S_aureus_all_plasmids.fasta
  5.  cat extra_plasmids.fasta >> S_aureus_all_plasmids.fasta
  6.  Shell_Script_4: makeblastdb from individual plasmid sequence
