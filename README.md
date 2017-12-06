@@ -39,7 +39,7 @@ Plasmid are rich in repetitive sequences. High level of sequence identity facili
 
 ### Setup
 Setup analysis enviroment:
- - `git clone https://github.com/NCBI-Hackathons/EndoVir.git`
+ - `git clone https://github.com/NCBI-Hackathons/Got_plasmid.git`
 
 
 ### Steps 
