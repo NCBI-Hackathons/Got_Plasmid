@@ -43,13 +43,12 @@ Setup analysis enviroment:
  - `cd got_plasmid`
  - `mkdir -p blast_output`
  - `mkdir -p contig_fasta`
+ - `mkdir -p file_names`
  - `mkdir -p genome_fasta`
  - `mkdir -p gff3_files`
  - `mkdir -p magic_output`
- - `mkdir -p magic_output`
  - `mkdir -p plasmid_fasta`
-
-
+ - `mkdir -p resut_tables`
 
 ### Steps 
 
