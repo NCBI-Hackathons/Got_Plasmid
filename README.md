@@ -28,12 +28,18 @@ The extent and importance of plasmid contribution to S. aureus pathogenesis is l
  
 Plasmid are rich in repetitive sequences. High level of sequence identity facilitates genetic recombination and contributes to the emergence of mosaic MGE. As such, MGE are ever-changing and can be hard to identify. Moreover, nomenclature in public databases is constantly evolving and inconsistency in annotation among MGE is common and complicates functional inter- and intra-species analyses. 
 
-## Dependencies:
+
+## Workflow
+### Dependencies:
 * R
 * R packages (data.table, rowr, GenomicRanges, IRanges, stringr, ggplot2)
 * Blast
 * magicBlast
 * eUtils
+
+### Create Directory
+
+
 
 ### Steps 
 
