@@ -57,6 +57,12 @@ Setup analysis enviroment:
  11. Shell_script_8: BLAST contigs against gapless genome database
  12. R_script_3: identify contigs with matches in gapless genomes
  
+ ## Visualization using Circos
+ ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/GQ900377.png)
+ ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/GQ900378.png)
+ ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/GQ900379.png)
+ ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/GQ900382.png)
+ 
  
 ## WorkFlow
 ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/workflow_2.png)
