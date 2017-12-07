@@ -59,7 +59,7 @@ Setup analysis enviroment:
  
  ## Visualization using Circos
  
- Contigs from same SRA dataset mapped against 4 different S. aureus plasmid
+ Contigs from same SRA dataset mapped against 4 different S. aureus plasmids
  
  ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/GQ900377.png)
  ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/GQ900378.png)
