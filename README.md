@@ -58,6 +58,9 @@ Setup analysis enviroment:
  12. R_script_3: identify contigs with matches in gapless genomes
  
  ## Visualization using Circos
+ 
+ Contigs from same SRA dataset mapped against 4 different S. aureus plasmid
+ 
  ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/GQ900377.png)
  ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/GQ900378.png)
  ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/GQ900379.png)
