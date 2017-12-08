@@ -61,11 +61,15 @@ Setup analysis enviroment:
  
  Contigs from same SRA dataset mapped against 4 different S. aureus plasmids
  
+ Plasmid present:
+ ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/AP003139.png)
+ 
+ Only some plasmid genes are present:
  ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/GQ900377.png)
- ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/GQ900378.png)
+ 
+ No homology:
  ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/GQ900379.png)
- ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/GQ900382.png)
  
- 
+
 ## WorkFlow
 ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/workflow_2.png)
