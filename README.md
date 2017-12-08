@@ -65,10 +65,10 @@ Setup analysis enviroment:
  ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/AP003139.png)
  
  Only some plasmid genes are present:
- ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/GQ900377.png)
+ ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/GQ900377.1.png)
  
  No homology:
- ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/GQ900379.png)
+ ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/GQ900379.1.png)
  
 
 ## WorkFlow
