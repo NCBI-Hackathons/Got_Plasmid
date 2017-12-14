@@ -105,7 +105,7 @@ R
 
 
 ### Step 1.
-
+# ------------------
       # Extract all genomic gapless genome fasta and gff.
 
       # from NCBI website, go to Assembly database:
@@ -140,7 +140,7 @@ R
       # mv *.gff ../gff/.
 
 
-# Step 2. 
+### Step 2. 
 # ------------------
       # Remove plasmid sequences from genomes.
 
@@ -151,7 +151,7 @@ R
       ### Use Rscript1_split_genome_from_plasmid_sequences.R 
       ### q()
 
-# Step 3. 
+### Step 3. 
 # ------------------
       # Retreive plasmid fasta with eUtils.
 
@@ -174,7 +174,7 @@ R
       ## cd Path_to/Got_plasmid/plasmids/assembly_ID/
       ## bash esearch_plasmid.sh
 
-# Step 4. 
+### Step 4. 
 # ------------------
       # Create customized blast databases.
 
@@ -192,7 +192,7 @@ R
       ## bash makeblastdb_individual_plasmid.sh
 
       
-# Step 5. 
+### Step 5. 
 # ------------------
       # Use magicBlast on one SRRA versus individual plasmid databases.
 
@@ -208,7 +208,7 @@ R
       ## bash magicblast_plasmid.sh
 
 
-# Step 6. 
+### Step 6. 
 # ------------------
       # Create individual contig.fasta files and generate a table with the % of plasmid sequences covered by contigs.
 
@@ -220,7 +220,7 @@ R
       ### q()
 
 
-# Step 7. 
+### Step 7. 
 # ------------------
       # Download and parse plasmid GenBank genome files.
       
@@ -232,7 +232,7 @@ R
       ### q()
 
 
-# Step 8. 
+### Step 8. 
 # ------------------
       # Generate plasmid and contig visualization using Circos.
       
@@ -250,7 +250,7 @@ R
       ## mv *.png ../../../../outputs/.
 
 
-# Step 9. 
+### Step 9. 
 # ------------------
       # Create customized contig db and blast contigs reciprocally.
 
@@ -267,7 +267,7 @@ R
       ## bash reciprocal_contig_Blast.sh
       
       
-# Step 10. 
+### Step 10. 
 # ------------------
       # Identify contigs matching each other and other plasmids.
 
@@ -279,7 +279,7 @@ R
       ### q()
 
 
-# Step 11. 
+### Step 11. 
 # ------------------
       # BLAST contigs against gapless genome databases.
       
@@ -296,7 +296,7 @@ R
 
 
 
-# Step 12. 
+### Step 12. 
 # ------------------
       # Identify contigs matching gapless genome sequences.
     
