@@ -31,12 +31,20 @@ AIMS:
  ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/GQ900379.1.png)
  
 
+## Dependencies ###
+
+magicBlast
+Blast
+Perl
+Circos
+R
 
 ## Setup ###
 
 - git clone https://github.com/NCBI-Hackathons/Got_plasmid.git
 
-###CIRCOS
+###CIRCOS###
+- Circos runs in perl
 - dowload circos-0.69-6.tgz from http://circos.ca/software/download/circos/
 - mv circos-0.69-6.tgz Path_to/Got_plasmid/circos/
 - cd Path_to/Got_plasmid/circos/
@@ -54,7 +62,7 @@ AIMS:
 - cpan[1]>install module_name (example cpan[1]>install Math::Bezier)
 - For other machines, read instructions: http://circos.ca/documentation/tutorials/configuration/perl_and_modules/
 
-###R 
+###R### 
 - cd Path_to/Got_plasmid/
 - wget http://cran.rstudio.com/src/base/R-3/R-3.4.1.tar.gz 
 - tar xvf R-3.4.1.tar.gz $ cd R-3.4.1 $ ./configure --prefix=$HOME/R 
