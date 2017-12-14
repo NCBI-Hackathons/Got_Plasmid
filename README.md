@@ -34,9 +34,13 @@ AIMS:
 ## Dependencies ###
 
 magicBlast
+
 Blast
+
 Perl
+
 Circos
+
 R
 
 ## Setup ###
