@@ -28,8 +28,6 @@ AIMS:
  ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/GQ900379.1.png)
  
 
-## WorkFlow
-![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/workflow_2.png)
 
 ## Setup ###
 
