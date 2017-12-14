@@ -28,72 +28,70 @@ AIMS:
 ## WorkFlow
 ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/workflow_2.png)
 
-### Setup ###
-# ===========
+## Setup ###
 
-# git clone https://github.com/NCBI-Hackathons/Got_plasmid.git
+git clone https://github.com/NCBI-Hackathons/Got_plasmid.git
 
-### CIRCOS ###
-# dowload circos-0.69-6.tgz from http://circos.ca/software/download/circos/
-# mv circos-0.69-6.tgz Path_to/Got_plasmid/circos/
-# cd Path_to/Got_plasmid/circos/
-# tar -xzvf circos-0.69-6.tgz
-# rm *.tgz
-#
-# mkdir circos-0.69-6/circos_plasmid/
-# mkdir circos-0.69-6/circos_plasmid/conf/
-# mkdir circos-0.69-6/circos_plasmid/data/
-#
-# check perl modules: perl -Mlocal::lib circos-0.69-6/bin/circos -modules
-### if missing modules
-### On Unix, you can install perl modules locally : 
-### perl -MCPAN -Mlocal::lib -e shell
-### cpan[1]>install module_name (example cpan[1]>install Math::Bezier)
-### For other machines, read instructions: http://circos.ca/documentation/tutorials/configuration/perl_and_modules/
+####CIRCOS
+dowload circos-0.69-6.tgz from http://circos.ca/software/download/circos/
+mv circos-0.69-6.tgz Path_to/Got_plasmid/circos/
+cd Path_to/Got_plasmid/circos/
+tar -xzvf circos-0.69-6.tgz
+rm *.tgz
 
-### R ###
-## cd Path_to/Got_plasmid/
-## wget http://cran.rstudio.com/src/base/R-3/R-3.4.1.tar.gz 
-## tar xvf R-3.4.1.tar.gz $ cd R-3.4.1 $ ./configure --prefix=$HOME/R 
-## make && make install 
-## export PATH=$PATH:/HOME/R/bin
-#
-# run R
-## R
-## source("https://bioconductor.org/biocLite.R")
-## biocLite("GenomicRanges")
-## biocLite("IRanges")
-## biocLite("Biostrings")
-## install.packages("data.table")
-## install.packages("reutils")
-## install.packages("devtools")
-## install.packages("biofiles")
-## install.packages("Biostrings")
-## devtools::install_github("gschofl/biofiles")
+mkdir circos-0.69-6/circos_plasmid/
+mkdir circos-0.69-6/circos_plasmid/conf/
+mkdir circos-0.69-6/circos_plasmid/data/
 
+check perl modules: perl -Mlocal::lib circos-0.69-6/bin/circos -modules
+if missing modules
+On Unix, you can install perl modules locally : 
+perl -MCPAN -Mlocal::lib -e shell
+cpan[1]>install module_name (example cpan[1]>install Math::Bezier)
+For other machines, read instructions: http://circos.ca/documentation/tutorials/configuration/perl_and_modules/
 
-### WorkFlow ###
-# ===========
+####R 
+cd Path_to/Got_plasmid/
+wget http://cran.rstudio.com/src/base/R-3/R-3.4.1.tar.gz 
+tar xvf R-3.4.1.tar.gz $ cd R-3.4.1 $ ./configure --prefix=$HOME/R 
+make && make install 
+export PATH=$PATH:/HOME/R/bin
 
-# 1.  Extract all genomic gapless genome fasta and gff.
-# 2.  Remove plasmid sequences from genomes.
-# 3.  Retreive plasmid fasta with eUtils.
-# 4.  Create customized blast databases.
-# 5.  Use magicBlast on one SRRA versus individual plasmid databases.
-# 6.  Create individual contig.fasta files and generate a table with the % of plasmid sequences covered by contigs.
-# 7.  Download and parse plasmid GenBank genome files.
-# 8.  Generate plasmid and contig visualization using Circos.
-# 9.  Create customized contig db and blast contigs reciprocally.
-# 10. Identify contigs matching each other and other plasmids.
-# 11. BLAST contigs against gapless genome databases.
-# 12. Identify contigs matching gapless genome sequences.
+run R
+R
+source("https://bioconductor.org/biocLite.R")
+biocLite("GenomicRanges")
+biocLite("IRanges")
+biocLite("Biostrings")
+install.packages("data.table")
+install.packages("reutils")
+install.packages("devtools")
+install.packages("biofiles")
+install.packages("Biostrings")
+devtools::install_github("gschofl/biofiles")
 
 
-### STEPS ###
-# ==================
+## WorkFlow
 
-# Step 1.
-# --------------------------
+ 1.  Extract all genomic gapless genome fasta and gff.
+ 2.  Remove plasmid sequences from genomes.
+ 3.  Retreive plasmid fasta with eUtils.
+ 4.  Create customized blast databases.
+ 5.  Use magicBlast on one SRRA versus individual plasmid databases.
+ 6.  Create individual contig.fasta files and generate a table with the % of plasmid sequences covered by contigs.
+ 7.  Download and parse plasmid GenBank genome files.
+ 8.  Generate plasmid and contig visualization using Circos.
+ 9.  Create customized contig db and blast contigs reciprocally.
+ 10. Identify contigs matching each other and other plasmids.
+ 11. BLAST contigs against gapless genome databases.
+ 12. Identify contigs matching gapless genome sequences.
+
+
+## STEPS 
+
+
+### Step 1.
+
       # Extract all genomic gapless genome fasta and gff.
 
       # from NCBI website, go to Assembly database:
