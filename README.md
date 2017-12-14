@@ -3,7 +3,10 @@
 
 ## Goal
 Defining the clinically relevant plasmids of Staphylococcus aureus and other pathogenic bacteria.
-Challenge: mobile genetic elements, including plasmids and phages,  are ambiguous as rich in repeats and low complexity sequences.
+
+## Challenge: 
+Identify plasmids using Next generation sequencing  and SRA data.
+Mobile genetic elements, including plasmids and phages, are ambiguous as rich in repeats and low complexity sequences.
 
 AIMS:
 - Identification of unique plasmids in individual patient samples
