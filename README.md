@@ -18,10 +18,10 @@ AIMS:
  Genes are in the second colored circled.
  Genes names and locus tag are indicated when available.
  
- Plasmid present:
+ Plasmid present in SRA - 2 contigs (blue, pink):
  ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/AP003139.png)
  
- Only some plasmid genes are present:
+ Plasmid partially present:
  ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/GQ900377.1.png)
  
  No homology:
