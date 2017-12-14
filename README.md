@@ -13,7 +13,10 @@ AIMS:
 
  ## Visualization using Circos
  
- Contigs from same SRA dataset mapped against 4 different S. aureus plasmids
+ Contigs from same SRA dataset mapped against 3 different S. aureus plasmids.
+ Contigs are represented in the first colored circle.
+ Genes are in the second colored circled.
+ Genes names and locus tag are indicated when available.
  
  Plasmid present:
  ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/AP003139.png)
