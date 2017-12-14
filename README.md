@@ -44,47 +44,45 @@ Circos
 R
 
 ## Setup ###
-
-- git clone https://github.com/NCBI-Hackathons/Got_plasmid.git
+ - git clone https://github.com/NCBI-Hackathons/Got_plasmid.git
 
 ###CIRCOS###
-- Circos runs in perl
-- dowload circos-0.69-6.tgz from http://circos.ca/software/download/circos/
-- mv circos-0.69-6.tgz Path_to/Got_plasmid/circos/
-- cd Path_to/Got_plasmid/circos/
-- tar -xzvf circos-0.69-6.tgz
-- rm *.tgz
+ - Circos runs in perl
+ - dowload circos-0.69-6.tgz from http://circos.ca/software/download/circos/
+ - mv circos-0.69-6.tgz Path_to/Got_plasmid/circos/
+ - cd Path_to/Got_plasmid/circos/
+ - tar -xzvf circos-0.69-6.tgz
+ - rm *.tgz
 
-- mkdir circos-0.69-6/circos_plasmid/
-- mkdir circos-0.69-6/circos_plasmid/conf/
-- mkdir circos-0.69-6/circos_plasmid/data/
+ - mkdir circos-0.69-6/circos_plasmid/
+ - mkdir circos-0.69-6/circos_plasmid/conf/
+ - mkdir circos-0.69-6/circos_plasmid/data/
 
-- check perl modules: perl -Mlocal::lib circos-0.69-6/bin/circos -modules
-- if missing modules
-- On Unix, you can install perl modules locally : 
-- perl -MCPAN -Mlocal::lib -e shell
-- cpan[1]>install module_name (example cpan[1]>install Math::Bezier)
-- For other machines, read instructions: http://circos.ca/documentation/tutorials/configuration/perl_and_modules/
+ - check perl modules: perl -Mlocal::lib circos-0.69-6/bin/circos -modules
+ - if missing modules
+ - On Unix, you can install perl modules locally : 
+ - perl -MCPAN -Mlocal::lib -e shell
+ - cpan[1]>install module_name (example cpan[1]>install Math::Bezier)
+ - For other machines, read instructions: http://circos.ca/documentation/tutorials/configuration/perl_and_modules/
 
 ###R### 
-- cd Path_to/Got_plasmid/
-- wget http://cran.rstudio.com/src/base/R-3/R-3.4.1.tar.gz 
-- tar xvf R-3.4.1.tar.gz $ cd R-3.4.1 $ ./configure --prefix=$HOME/R 
-- make && make install 
-- export PATH=$PATH:/HOME/R/bin
-
-run R
-- R
-- source("https://bioconductor.org/biocLite.R")
-- biocLite("GenomicRanges")
-- biocLite("IRanges")
-- biocLite("Biostrings")
-- install.packages("data.table")
-- install.packages("reutils")
-- install.packages("devtools")
-- install.packages("biofiles")
-- install.packages("Biostrings")
-- devtools::install_github("gschofl/biofiles")
+ - cd Path_to/Got_plasmid/
+ - wget http://cran.rstudio.com/src/base/R-3/R-3.4.1.tar.gz 
+ - tar xvf R-3.4.1.tar.gz $ cd R-3.4.1 $ ./configure --prefix=$HOME/R 
+ - make && make install 
+ - export PATH=$PATH:/HOME/R/bin
+ 
+ - run R
+ - source("https://bioconductor.org/biocLite.R")
+ - biocLite("GenomicRanges")
+ - biocLite("IRanges")
+ - biocLite("Biostrings")
+ - install.packages("data.table")
+ - install.packages("reutils")
+ - install.packages("devtools")
+ - install.packages("biofiles")
+ - install.packages("Biostrings")
+ - devtools::install_github("gschofl/biofiles")
 
 
 ## WorkFlow
