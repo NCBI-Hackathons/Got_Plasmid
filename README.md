@@ -315,32 +315,3 @@ The extent and importance of plasmid contribution to S. aureus pathogenesis is l
 Plasmid are rich in repetitive sequences. High level of sequence identity facilitates genetic recombination and contributes to the emergence of mosaic MGE. As such, MGE are ever-changing and can be hard to identify. Moreover, nomenclature in public databases is constantly evolving and inconsistency in annotation among MGE is common and complicates functional inter- and intra-species analyses. 
 
 
-## Workflow
-### Dependencies:
-* R
-* R packages (data.table, rowr, GenomicRanges, IRanges, stringr, ggplot2)
-* Blast
-* magicBlast
-* eUtils
-
-### Setup
-Setup analysis enviroment:
- - `git clone https://github.com/NCBI-Hackathons/Got_plasmid.git`
-
-
-### Steps 
-
- 1.  Shell_Script_1: retreive gapless S. aureus genomic sequences
- 2.  Shell_Script_2: retreive gff files associated to gapless S. aureus genomic sequences 
- 3.  Rscript1_split_genome_from_plasmid_sequences_git.R retreive plasmid sequence embedded in fasta files
- 4.  Shell_Script_3: retreive plasmid fasta and create S_aureus_all_plasmids.fasta
- 5.  cat extra_plasmids.fasta >> S_aureus_all_plasmids.fasta
- 6.  Shell_Script_4: makeblastdb from individual plasmid sequence
- 7.  Shell_Script_5: makeblastdb from all plasmid sequences
- 8.  Shell_Script_6: makeblastdb from gapless genome sequences
- 9.  Shell_Script_7 magicBlast: one SRRA versus individual plasmid databases
- 10. R_script_2: create got_plamid.csv table and contig files
- 11. Shell_script_8: BLAST contigs against gapless genome database
- 12. R_script_3: identify contigs with matches in gapless genomes
- 
-
