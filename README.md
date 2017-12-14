@@ -24,7 +24,7 @@ AIMS:
  Plasmid partially present:
  ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/GQ900377.1.png)
  
- No homology:
+ Plasmid absent in SRA - no contig homology:
  ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/GQ900379.1.png)
  
 
