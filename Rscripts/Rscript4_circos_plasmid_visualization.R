@@ -21,12 +21,16 @@ readFastaRef = function(refFile) {
 
 ### Inputs ###
 #============
+SRA_names <- scan("SRA/SRA_ID.txt", what=character(0),sep="\n")
+
+
+for (sr in 1:length(SRA_names)) {
 setwd("plasmids/magic_output/")
+SRA = SRA_names[sr]
 
-
-SRA <- "SRR6227128"
-my_magic_files <- list.files(pattern = "\\magic.txt")
+my_magic_files <- list.files(pattern = SRA)
 my_magic_names <- gsub(".magic.txt","",my_magic_files)
+plasmid_names <- gsub(".*-","",my_magic_names)
 my_magic_list <- lapply(my_magic_files, function(i){fread( i, sep = "\t", header=T, data.table = F, fill = T, skip = 2)})
 
 names(my_magic_list) <- my_magic_names
@@ -41,7 +45,7 @@ output_list <- list()
 for (o in 1:length(my_magic_list)) {
   
   my_magic_table <- my_magic_list[[o]]
-  my_magic_plas_name <- names(my_magic_list)[o]
+  my_magic_plas_name <- plasmid_names[o]
   ref <- readFastaRef(paste("../fasta/", my_magic_plas_name, ".fasta", sep = ""))
   lgth_ref <- length(ref)  
   
@@ -123,7 +127,7 @@ for (r in 1:length(x)) {
       
       #--------- create Karyotype
       setwd("circos/circos-0.69-6/circos_plasmid/data/")
-      karyo <- paste(nam, "_karyotpye.txt", sep = "")
+      karyo <- paste(SRA,"-",nam, "_karyotpye.txt", sep = "")
       cat(paste("chr - chr1 1 0 ", size.plas, " black",sep=""),sep="\n",file = karyo,append=TRUE)
       cat(paste("band chr1 1.1 1.1 0 ", round(size.plas/10*1), " grey",sep=""),sep="\n",file = karyo,append=TRUE)
       cat(paste("band chr1 1.1 1.1 ", round(size.plas/10*1), " ", round(size.plas/10*2), " grey",sep=""),sep="\n",file = karyo,append=TRUE)
@@ -137,7 +141,7 @@ for (r in 1:length(x)) {
       cat(paste("band chr1 1.1 1.1 ", round(size.plas/10*9), " ", size.plas, " grey",sep=""),sep="\n",file = karyo,append=TRUE)
       
       #--------- create contig highlights.txt
-      highlight1 <- paste(nam, "_highlight1.txt", sep = "")
+      highlight1 <- paste(SRA,"-",nam, "_highlight1.txt", sep = "")
             for (i in 1:round(nrow(nodupl.df))) {
                 
                 cat(paste("chr1", nodupl.df$overl_coord_start[i], 
@@ -148,7 +152,7 @@ for (r in 1:length(x)) {
             }
       
       #--------- create cover.txt
-      cover1 <- paste(nam, "_cover1.txt", sep = "")
+      cover1 <- paste(SRA,"-",nam, "_cover1.txt", sep = "")
             for (i in 1:round(nrow(nodupl.df))) {
               
               cat(paste("chr1", nodupl.df$overl_coord_start[i], 
@@ -159,7 +163,7 @@ for (r in 1:length(x)) {
             }
       
       #--------- create gene_block.txt
-      gene.blocks <- paste(nam, "_gene_block.txt", sep = "")
+      gene.blocks <- paste(SRA,"-",nam, "_gene_block.txt", sep = "")
             for (i in 1:nrow(my_gbk_table)) {
               
               cat(paste("chr1", my_gbk_table$start[i], 
@@ -168,12 +172,12 @@ for (r in 1:length(x)) {
                         sep="\t"),
                   sep="\n",file = gene.blocks,append=T)
             }
-      temp <- read.delim(paste(nam, "_gene_block.txt", sep = ""), sep = "\t", header = F)
+      temp <- read.delim(paste(SRA,"-",nam, "_gene_block.txt", sep = ""), sep = "\t", header = F)
       temp <- temp[-1,]
-      write.table(temp, paste(nam, "_gene_block.txt", sep = ""), quote = F, row.names = F, col.names = F, sep = "\t")
+      write.table(temp, paste(SRA,"-",nam, "_gene_block.txt", sep = ""), quote = F, row.names = F, col.names = F, sep = "\t")
       
       #--------- create label_locus.txt
-      label.locus <- paste(nam, "_locus_labels.txt", sep = "")
+      label.locus <- paste(SRA,"-",nam, "_locus_labels.txt", sep = "")
             for (i in 1:nrow(my_gbk_table)) {
               
               cat(paste("chr1", 
@@ -183,12 +187,12 @@ for (r in 1:length(x)) {
                         sep="\t"),
                   sep="\n",file = label.locus,append=T)
             }
-      temp <- read.delim(paste(nam, "_locus_labels.txt", sep = ""), sep = "\t", header = F)
+      temp <- read.delim(paste(SRA,"-",nam, "_locus_labels.txt", sep = ""), sep = "\t", header = F)
       temp <- temp[-1,]
-      write.table(temp, paste(nam, "_locus_labels.txt", sep = ""), quote = F, row.names = F, col.names = F, sep = "\t")
+      write.table(temp, paste(SRA,"-",nam, "_locus_labels.txt", sep = ""), quote = F, row.names = F, col.names = F, sep = "\t")
       
       #--------- create label_genes.txt
-      label.genes <- paste(nam, "_gene_labels.txt", sep = "")
+      label.genes <- paste(SRA,"-",nam, "_gene_labels.txt", sep = "")
             for (i in 1:nrow(my_gbk_table)) {
               
               cat(paste("chr1", 
@@ -198,16 +202,16 @@ for (r in 1:length(x)) {
                         sep="\t"),
                   sep="\n",file = label.genes,append=T)
             }
-      temp <- read.delim(paste(nam, "_gene_labels.txt", sep = ""), sep = "\t", header = F)
+      temp <- read.delim(paste(SRA,"-",nam, "_gene_labels.txt", sep = ""), sep = "\t", header = F)
       temp <- temp[-1,]
       s <- which(is.na(temp$V4) == T)
             if (length(s)>0) {
               temp <- temp[-which(is.na(temp$V4) == T),]
             }
-      write.table(temp, paste(nam, "_gene_labels.txt", sep = ""), quote = F, row.names = F, col.names = F, sep = "\t")
+      write.table(temp, paste(SRA,"-",nam, "_gene_labels.txt", sep = ""), quote = F, row.names = F, col.names = F, sep = "\t")
       
       #--------- create separator.txt
-      separator <- paste(nam, "_separator.txt", sep = "")
+      separator <- paste(SRA,"-",nam, "_separator.txt", sep = "")
         cat(paste("chr1", 
                   0, 
                   max(my_gbk_table$end),
@@ -216,7 +220,7 @@ for (r in 1:length(x)) {
         
       #--------- create Highlight.conf
       setwd("../conf/")
-      highl <- paste(nam, "_highlights.conf", sep = "")
+      highl <- paste(SRA,"-",nam, "_highlights.conf", sep = "")
       
       cat(paste("<highlights>",sep=""),sep="\n",file = highl,append=TRUE)
       
@@ -254,7 +258,7 @@ for (r in 1:length(x)) {
       cat(paste("</highlights>",sep=""),sep="\n",file = highl,append=TRUE)
       
       #--------- create ideogram.conf
-      ideo <- paste(nam, "_ideogram.conf", sep = "")
+      ideo <- paste(SRA,"-",nam, "_ideogram.conf", sep = "")
       
       cat(paste("<ideogram>",sep=""),sep="\n",file = ideo,append=TRUE)
       
@@ -281,7 +285,7 @@ for (r in 1:length(x)) {
       cat(paste("</ideogram>",sep=""),sep="\n",file = ideo,append=TRUE)
       
       #--------- create ticks_plasmid.conf
-      ticks <- paste(nam, "_ticks.conf", sep = "")
+      ticks <- paste(SRA,"-",nam, "_ticks.conf", sep = "")
       
       cat(paste("show_ticks          = yes",sep=""),sep="\n",file = ticks,append=TRUE)
       cat(paste("show_tick_labels    = yes",sep=""),sep="\n",file = ticks,append=TRUE)
@@ -330,7 +334,7 @@ for (r in 1:length(x)) {
       cat(paste("</ticks>",sep=""),sep="\n",file = ticks,append=TRUE)
       
       #--------- create Final.conf
-      final <- paste(nam, ".conf", sep = "")
+      final <- paste(SRA,"-",nam, ".conf", sep = "")
       
       cat(paste("<<include etc/colors_fonts_patterns.conf>>",sep=""),sep="\n",file = final,append=TRUE)
       cat(paste("<<include ", ideo, ">>",sep=""),sep="\n",file = final,append=TRUE)
@@ -392,18 +396,22 @@ for (r in 1:length(x)) {
       setwd("../../../../")
 
 }
-
+}
 
 #--------- create  Circos.sh for perl using local:lib 
 setwd("circos/circos-0.69-6/circos_plasmid/conf/")
 my_save_sh <- list.files(pattern = "\\_highlights.conf")
+my_save_sh <- sapply(my_save_sh, function(x) gsub(".*-","",x))
 my_save_sh <- sapply(my_save_sh, function(x) gsub("_highlights.conf","",x))
 
 
-Script_locallib  = "perl_local_circos_temp.sh"
+Script_locallib  = "perl_local_circos.sh"
 cat(paste("#!/bin/bash"),sep="\n",file=Script_locallib,append=TRUE)
-for (i in 1:length(my_save_sh)) {
-  cat(paste("perl -Mlocal::lib ../../bin/circos -conf ", paste(my_save_sh[i], ".conf", sep = ""), " -outputfile ", my_save_sh[i], sep = ""),sep="\n",file=Script_locallib,append=TRUE)  
+
+for (sr in 1:length(SRA_names)) {
+    for (i in 1:length(my_save_sh)) {
+      cat(paste("perl -Mlocal::lib ../../bin/circos -conf ", paste(SRA_names[sr],"_",my_save_sh[i], ".conf", sep = ""), " -outputfile ", paste(SRA_names[sr],"_",my_save_sh[i], sep= ""), sep = ""),sep="\n",file=Script_locallib,append=TRUE)  
+    }
 }
-# chmod +x /panfs/pan1.be-md.ncbi.nlm.nih.gov/product_manager_research_projects/got_plasmid/scripts/perl_local_circos.sh
+
 setwd("../../../../")

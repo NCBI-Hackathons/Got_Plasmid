@@ -1,3 +1,6 @@
+
+
+SRA <- scan("SRA/SRA_ID.txt", what=character(0),sep="\n")
 setwd("plasmids/contigs/")
 contig_files = list.files(pattern = "\\_matching_contigs.fasta")
 contig_names = sapply(contig_files, 

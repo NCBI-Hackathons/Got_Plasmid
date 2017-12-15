@@ -17,11 +17,20 @@ readFastaRef = function(refFile) {
 
 ### Inputs ###
 #===============
+
+SRA_names <- scan("SRA/SRA_ID.txt", what=character(0),sep="\n")
+
+
+for (sr in 1:length(SRA_names)) {
 setwd("plasmids/contigs/")
-contig_files = list.files(pattern = "\\_matching_contigs.fasta")
+SRA = SRA_names[sr]
+
+
+
+contig_files = list.files(pattern = SRA)
 contig_names = sapply(contig_files, 
                       function(s) {s = gsub("_matching_contigs.fasta", "", s)})
-SRA <- "SRR6227128"
+
 
 #===============
 
@@ -31,7 +40,8 @@ SRA <- "SRR6227128"
 setwd("reciprocal_blast/")
 
 empty <- list()
-my_blast_files <- list.files(pattern = "\\vs")
+my_blast_files <- list.files(pattern = "vs")
+my_blast_files <- my_blast_files[grep(SRA,my_blast_files)]
 for (h in 1:length(my_blast_files)) {
   info = file.info(my_blast_files[h])
   empty[[h]] = rownames(info[info$size == 0, ])
@@ -173,7 +183,7 @@ for (i in 1:length(contig_names)) {
 }
 
 
-files = list.files(pattern = SRA)
+files = list.files(pattern = paste("___",SRA, sep =""))
 reciprocal.df <- lapply(files, function(i){fread( i, sep = "\t", header=T, data.table = F, fill = T)})
 
 reciprocal.df <- do.call(rbind,reciprocal.df)
@@ -233,3 +243,4 @@ for(i in 1:ncol(y)) {
 write.csv(y, paste("../../../outputs/", SRA, "_summary_table.csv", sep = ""), row.names = F)
 
 setwd("../../../")
+}
