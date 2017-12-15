@@ -37,6 +37,8 @@ magicBlast
 
 Blast
 
+eUtils
+
 Perl
 
 Circos
