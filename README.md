@@ -149,9 +149,7 @@ R
       ## ***command line***
       ## cd Path_to/Got_plasmid/
 
-      ### ./R
-      ### Use Rscript1_split_genome_from_plasmid_sequences.R 
-      ### q()
+      ### Rscript Rscripts/Rscript1_split_genome_from_plasmid_sequences.R 
 
 ### Step 3. 
 # ------------------
@@ -168,9 +166,7 @@ R
       ## ***command line***
       ## cd Path_to/Got_plasmid/
 
-      ### ./R
-      ### use esearch_plasmid.R
-      ### q()
+      ### Rscript Rscripts/esearch_plasmid.R
 
       ## ***command line***
       ## cd Path_to/Got_plasmid/plasmids/assembly_ID/
@@ -185,9 +181,7 @@ R
       ## bash makeblastdb_gapless_genomes.sh
       ## cd Path_to/Got_plasmid/
 
-      ### ./R
-      ### use makeblastdb_individual_plasmid.R
-      ### q()
+      ### Rscript Rscripts/makeblastdb_individual_plasmid.R
 
       ## ***command line***
       ## cd PAth_to/Got_plasmid/plasmids/fasta/
@@ -201,9 +195,7 @@ R
       ## ***command line***
       ## cd Path_to/Got_plasmid/
       
-      ### ./R
-      ### use magicblast_plasmid.R
-      ### q()
+      ### Rscript Rscripts/magicblast_plasmid.R
 
       ## ***command line***
       ## cd PAth_to/Got_plasmid/plasmids/magic_output/
@@ -217,9 +209,7 @@ R
       ## ***command line***
       ## cd Path_to/Got_plasmid/
       
-      ### ./R
-      ### use Rscript2_magicBlast_output.R
-      ### q()
+      ### Rscript Rscripts/Rscript2_magicBlast_output.R
 
 
 ### Step 7. 
@@ -229,9 +219,7 @@ R
       ## ***command line***
       ## cd Path_to/Got_plasmid/
       
-      ### ./R
-      ### use Rscript3_GenBank_parser.R
-      ### q()
+      ### Rscript Rscripts/Rscript3_GenBank_parser.R
 
 
 ### Step 8. 
@@ -241,10 +229,7 @@ R
       ## ***command line***
       ## cd Path_to/Got_plasmid/
 
-      ### ./R
-      ### use Rscript4_circos_plasmid_visualization
-      ### q()
-
+      ### Rscript Rscripts/Rscript4_circos_plasmid_visualization
 
       ## ***command line***
       ## cd PAth_to/Got_plasmid/circos/circos-0.69-6/circos_plasmid/conf/
@@ -259,9 +244,7 @@ R
       ## ***command line***
       ## cd Path_to/Got_plasmid/
       
-      ### ./R
-      ### use contigs.R
-      ### q()
+      ### Rscript Rscripts/contigs.R
 
       ## ***command line***
       ## cd PAth_to/Got_plasmid/plasmids/contigs/
@@ -276,9 +259,7 @@ R
       ## ***command line***
       ## cd Path_to/Got_plasmid/
       
-      ### ./R
-      ### use Rscript5_reciprocal_blast_contig.R
-      ### q()
+      ### Rscript Rscripts/Rscript5_reciprocal_blast_contig.R
 
 
 ### Step 11. 
@@ -288,9 +269,7 @@ R
       ## ***command line***
       ## cd Path_to/Got_plasmid/
       
-      ### ./R
-      ### use blast_contigs_vs_gapless_genomes.R
-      ### q()
+      ### Rscript Rscripts/blast_contigs_vs_gapless_genomes.R
       
       ## ***command line***
       ## cd PAth_to/Got_plasmid/plasmids/contigs/
@@ -305,9 +284,7 @@ R
       ## ***command line***
       ## cd Path_to/Got_plasmid/
       
-      ### ./R
-      ### use Rscript6_contig_match_in_genomes.R
-      ### q()
+      ### Rscript Rscripts/Rscript6_contig_match_in_genomes.R
 
 
 # ==============
