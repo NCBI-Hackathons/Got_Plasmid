@@ -29,7 +29,7 @@ setwd("plasmids/magic_output/")
 SRA = SRA_names[sr]
 
 my_magic_files <- list.files(pattern = SRA)
-my_magic_names <- gsub(".magic.txt","",my_magic_files)
+my_magic_names <- gsub("_magic.txt","",my_magic_files)
 plasmid_names <- gsub(".*-","",my_magic_names)
 my_magic_list <- lapply(my_magic_files, function(i){fread( i, sep = "\t", header=T, data.table = F, fill = T, skip = 2)})
 
@@ -91,7 +91,7 @@ for (o in 1:length(my_magic_list)) {
   my_magic_table$overall_coverage <- round(sum(as.numeric(coord[,3]))/lgth_ref*100)
   my_magic_table <- my_magic_table[-c(2,4,5,6,11,14,18,19,23,24)]
   output_list[[o]] <- my_magic_table
-  names(output_list)[o] <- my_magic_plas_name
+  names(output_list)[o] <- plasmid_names[o]
   
 }
 
@@ -403,7 +403,7 @@ setwd("circos/circos-0.69-6/circos_plasmid/conf/")
 my_save_sh <- list.files(pattern = "\\_highlights.conf")
 my_save_sh <- sapply(my_save_sh, function(x) gsub(".*-","",x))
 my_save_sh <- sapply(my_save_sh, function(x) gsub("_highlights.conf","",x))
-
+my_save_sh <- unique(my_save_sh)
 
 Script_locallib  = "perl_local_circos.sh"
 cat(paste("#!/bin/bash"),sep="\n",file=Script_locallib,append=TRUE)
