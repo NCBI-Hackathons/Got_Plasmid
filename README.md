@@ -273,7 +273,7 @@ R
       
       ## ***command line***
       ## cd PAth_to/Got_plasmid/plasmids/contigs/
-      ## ./blast_contigs_vs_gapless_genomes.sh
+      ## bash blast_contigs_vs_gapless_genomes.sh
 
 
 
