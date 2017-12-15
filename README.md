@@ -70,7 +70,7 @@ R
  - wget http://cran.rstudio.com/src/base/R-3/R-3.4.1.tar.gz 
  - tar xvf R-3.4.1.tar.gz $ cd R-3.4.1 $ ./configure --prefix=$HOME/R 
  - make && make install 
- - export PATH=$PATH:/HOME/R/bin
+ - export PATH=$PATH:$HOME/R/bin
  
  - run R
  - source("https://bioconductor.org/biocLite.R")
