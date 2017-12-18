@@ -33,6 +33,8 @@ AIMS:
 
 ## Dependencies ###
 
+wget
+
 magicBlast
 
 Blast
@@ -49,6 +51,11 @@ R
    - Open terminal or connect to server
     
     git clone https://github.com/NCBI-Hackathons/Got_plasmid.git
+    
+###wget###
+   - For mac use Homebrew
+   
+    brew install wget
     
 ###EDirect###
    - From https://www.ncbi.nlm.nih.gov/books/NBK179288/
