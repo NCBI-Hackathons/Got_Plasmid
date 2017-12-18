@@ -47,27 +47,33 @@ R
 
 ## Setup ###
  - git clone https://github.com/NCBI-Hackathons/Got_plasmid.git
+ 
+###magicBLAST###
+
+    wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/magicblast/LATEST/ncbi-magicblast-1.3.0-x64-linux.tar.gz
+    tar -xvzf ncbi-magicblast-1.3.0-x64-linux.tar.gz
+    export PATH=$PATH:$ENDOVIR/tools/ncbi-magicblast-1.3.0/bin/
 
 ###CIRCOS###
- - Circos runs in perl
- - dowload circos-0.69-6.tgz from http://circos.ca/software/download/circos/ (copy link location)
- - 
- - mv circos-0.69-6.tgz <Path_to>/Got_plasmid/circos/
- - cd <Path_to>/Got_plasmid/circos/
- - tar -xzvf circos-0.69-6.tgz
- - rm *.tgz
 
- - mkdir circos-0.69-6/circos_plasmid/
- - mkdir circos-0.69-6/circos_plasmid/conf/
- - mkdir circos-0.69-6/circos_plasmid/data/
+    Circos runs in perl
+    dowload circos-0.69-6.tgz from http://circos.ca/software/download/circos/ (copy link location)
+    mv circos-0.69-6.tgz <Path_to>/Got_plasmid/circos/
+    cd <Path_to>/Got_plasmid/circos/
+    tar -xzvf circos-0.69-6.tgz
+    rm *.tgz
 
- - check perl modules: perl -Mlocal::lib circos-0.69-6/bin/circos -modules
- - if missing modules
- - On Unix, you can install perl modules locally : 
- - perl -MCPAN -Mlocal::lib -e shell
- - cpan[1]>install module_name (example cpan[1]>install Math::Bezier)
- - For other machines, read instructions: http://circos.ca/documentation/tutorials/configuration/perl_and_modules/
- - Check again to make sure: perl -Mlocal::lib circos-0.69-6/bin/circos -modules
+    mkdir circos-0.69-6/circos_plasmid/
+    mkdir circos-0.69-6/circos_plasmid/conf/
+    mkdir circos-0.69-6/circos_plasmid/data/
+
+    check perl modules: perl -Mlocal::lib circos-0.69-6/bin/circos -modules
+    if missing modules
+    On Unix, you can install perl modules locally : 
+    perl -MCPAN -Mlocal::lib -e shell
+    cpan[1]>install module_name (example cpan[1]>install Math::Bezier)
+    For other machines, read instructions: http://circos.ca/documentation/tutorials/configuration/perl_and_modules/
+    Check again to make sure: perl -Mlocal::lib circos-0.69-6/bin/circos -modules
 
 ###R### 
  - cd Path_to/Got_plasmid/
