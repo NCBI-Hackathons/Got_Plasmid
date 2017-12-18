@@ -47,6 +47,14 @@ R
 
 ## Setup ###
     git clone https://github.com/NCBI-Hackathons/Got_plasmid.git
+    
+###BLAST###
+  Download system compatible BLAST version.
+  For MAC:
+  
+    wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.7.1+-x64-macosx.tar.gz
+    tar -xvzf
+    export PATH=$PATH:$<Path_to>/ncbi-blast-2.7.1+/bin/
  
 ###magicBLAST###
 
@@ -57,7 +65,8 @@ R
 ###CIRCOS###
 
     Circos runs in perl
-    dowload circos-0.69-6.tgz from http://circos.ca/software/download/circos/ (copy link location)
+    dowload circos-0.69-6.tgz from http://circos.ca/software/download/circos/ (copy circos-0.69-6.tgz link location)
+    wget http://circos.ca/distribution/circos-0.69-6.tgz
     mv circos-0.69-6.tgz <Path_to>/Got_plasmid/circos/
     cd <Path_to>/Got_plasmid/circos/
     tar -xzvf circos-0.69-6.tgz
