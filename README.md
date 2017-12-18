@@ -46,7 +46,7 @@ Circos
 R
 
 ## Setup ###
- - git clone https://github.com/NCBI-Hackathons/Got_plasmid.git
+    git clone https://github.com/NCBI-Hackathons/Got_plasmid.git
  
 ###magicBLAST###
 
