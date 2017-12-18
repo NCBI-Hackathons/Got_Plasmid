@@ -52,7 +52,7 @@ R
 
     wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/magicblast/LATEST/ncbi-magicblast-1.3.0-x64-linux.tar.gz
     tar -xvzf ncbi-magicblast-1.3.0-x64-linux.tar.gz
-    export PATH=$PATH:$ENDOVIR/tools/ncbi-magicblast-1.3.0/bin/
+    export PATH=$PATH:$<Path_to>/ncbi-magicblast-1.3.0/bin/
 
 ###CIRCOS###
 
