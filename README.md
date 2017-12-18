@@ -81,7 +81,7 @@ R
     export PATH=$PATH:$<Path_to>/ncbi-magicblast-1.3.0/bin/
 
 ###CIRCOS###
-    - Circos runs in perl
+   - Circos runs in perl
     
     dowload circos-0.69-6.tgz from http://circos.ca/software/download/circos/ (copy circos-0.69-6.tgz link location)
     wget http://circos.ca/distribution/circos-0.69-6.tgz
@@ -102,8 +102,8 @@ R
     For other machines, read instructions: http://circos.ca/documentation/tutorials/configuration/perl_and_modules/
     Check again to make sure: perl -Mlocal::lib circos-0.69-6/bin/circos -modules
 
-###R### 
-    - Install R locally
+###R###
+   - Install R locally
    
     cd Path_to/Got_plasmid/
     wget http://cran.rstudio.com/src/base/R-3/R-3.4.1.tar.gz 
