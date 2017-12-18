@@ -70,14 +70,18 @@ R
    - Download system compatible BLAST version.
   For MAC:
   
-    wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.7.1+-x64-macosx.tar.gz
-    tar -xvzf
-    export PATH=$PATH:$<Path_to>/ncbi-blast-2.7.1+/bin/
+    wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.7.1+.dmg
+    export PATH=$PATH:$<path_to>/ncbi-blast-2.2.29+/bin
+    
+  Download BLAST databases: Follow instrucitons at : https://www.ncbi.nlm.nih.gov/books/NBK52640/
+  
+    $export BLASTDB=$<path_to>/blastdb
  
 ###magicBLAST###
-
-    wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/magicblast/LATEST/ncbi-magicblast-1.3.0-x64-linux.tar.gz
-    tar -xvzf ncbi-magicblast-1.3.0-x64-linux.tar.gz
+   - Download system compatible magicBLAST version.
+  For MAC:
+    
+    wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/magicblast/LATEST/ncbi-magicblast-1.3.0.dmg
     export PATH=$PATH:$<Path_to>/ncbi-magicblast-1.3.0/bin/
 
 ###CIRCOS###
