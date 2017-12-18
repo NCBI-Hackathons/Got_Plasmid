@@ -37,7 +37,7 @@ magicBlast
 
 Blast
 
-eUtils
+EDirect
 
 Perl
 
@@ -47,6 +47,22 @@ R
 
 ## Setup ###
     git clone https://github.com/NCBI-Hackathons/Got_plasmid.git
+    
+###EDirect###
+  From https://www.ncbi.nlm.nih.gov/books/NBK179288/
+  
+    cd ~
+    /bin/bash
+    perl -MNet::FTP -e \
+      '$ftp = new Net::FTP("ftp.ncbi.nlm.nih.gov", Passive => 1);
+       $ftp->login; $ftp->binary;
+       $ftp->get("/entrez/entrezdirect/edirect.tar.gz");'
+    gunzip -c edirect.tar.gz | tar xf -
+    rm edirect.tar.gz
+    builtin exit
+    export PATH=$PATH:$HOME/edirect >& /dev/null || setenv PATH "${PATH}:$HOME/edirect"
+    ./edirect/setup.sh
+    echo "export PATH=\$PATH:\$HOME/edirect" >> $HOME/.bash_profile
     
 ###BLAST###
   Download system compatible BLAST version.
