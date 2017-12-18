@@ -94,10 +94,9 @@ R
 ###CIRCOS###
    - Circos runs in perl
     
+    cd <Path_to>/Got_plasmid/circos/
     dowload circos-0.69-6.tgz from http://circos.ca/software/download/circos/ (copy circos-0.69-6.tgz link location)
     wget http://circos.ca/distribution/circos-0.69-6.tgz
-    mv circos-0.69-6.tgz <Path_to>/Got_plasmid/circos/
-    cd <Path_to>/Got_plasmid/circos/
     tar -xzvf circos-0.69-6.tgz
     rm *.tgz
 
