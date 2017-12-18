@@ -51,7 +51,7 @@ R
     git clone https://github.com/NCBI-Hackathons/Got_plasmid.git
     
 ###EDirect###
- -From https://www.ncbi.nlm.nih.gov/books/NBK179288/
+   - From https://www.ncbi.nlm.nih.gov/books/NBK179288/
  
     cd ~
     /bin/bash
@@ -67,7 +67,7 @@ R
     echo "export PATH=\$PATH:\$HOME/edirect" >> $HOME/.bash_profile
     
 ###BLAST###
-  -Download system compatible BLAST version.
+    - Download system compatible BLAST version.
   For MAC:
   
     wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.7.1+-x64-macosx.tar.gz
@@ -81,7 +81,7 @@ R
     export PATH=$PATH:$<Path_to>/ncbi-magicblast-1.3.0/bin/
 
 ###CIRCOS###
-   -Circos runs in perl
+     - Circos runs in perl
     
     dowload circos-0.69-6.tgz from http://circos.ca/software/download/circos/ (copy circos-0.69-6.tgz link location)
     wget http://circos.ca/distribution/circos-0.69-6.tgz
@@ -103,7 +103,7 @@ R
     Check again to make sure: perl -Mlocal::lib circos-0.69-6/bin/circos -modules
 
 ###R### 
-   -Install R locally
+     - Install R locally
    
     cd Path_to/Got_plasmid/
     wget http://cran.rstudio.com/src/base/R-3/R-3.4.1.tar.gz 
