@@ -133,7 +133,6 @@ R
     install.packages("reutils")
     install.packages("devtools")
     install.packages("biofiles")
-    install.packages("Biostrings")
     devtools::install_github("gschofl/biofiles")
 
 
