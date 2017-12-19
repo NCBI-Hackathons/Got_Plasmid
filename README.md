@@ -278,7 +278,7 @@ R
       ## ***command line***
       ## cd Path_to/Got_plasmid/
 
-      ### Rscript Rscripts/Rscript4_circos_plasmid_visualization
+      ### Rscript Rscripts/Rscript4_circos_plasmid_visualization.R
 
       ## ***command line***
       ## cd PAth_to/Got_plasmid/circos/circos-0.69-6/circos_plasmid/conf/
