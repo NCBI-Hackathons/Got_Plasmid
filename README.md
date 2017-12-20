@@ -4,9 +4,9 @@
  ## Table of Contents
 
 * [Intro](https://github.com/NCBI-Hackathons/Got_Plasmid.git#intro)
-* [Help](https://github.com/NCBI-Hackathons/Got_Plasmid.git#Dependencies)
-* [Pre-built binaries](https://github.com/NCBI-Hackathons/Got_Plasmid.git#Inputs)
-* [Building from source](https://github.com/NCBI-Hackathons/Got_Plasmid.git#Outputs)
+* [Dependencies](https://github.com/NCBI-Hackathons/Got_Plasmid.git#Dependencies)
+* [Inputs](https://github.com/NCBI-Hackathons/Got_Plasmid.git#Inputs)
+* [Outputs](https://github.com/NCBI-Hackathons/Got_Plasmid.git#Outputs)
 
 
 ## Intro
