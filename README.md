@@ -1,36 +1,26 @@
 # Got Plasmids?
 ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/got_plasmid.png)
  
-## Goal
+ ## Table of Contents
+
+* [Intro](https://github.com/NCBI-Hackathons/Got_Plasmid.git#intro)
+* [Help](https://github.com/NCBI-Hackathons/Got_Plasmid.git#Dependencies)
+* [Pre-built binaries](https://github.com/NCBI-Hackathons/Got_Plasmid.git#Inputs)
+* [Building from source](https://github.com/NCBI-Hackathons/Got_Plasmid.git#Outputs)
+
+
+## Intro
+### Goal
 Retreive and visualize plasmid sequences from SRA and Next Generation Sequencing (NGS) data.
 
-
-## Challenge: 
+### Challenge: 
 Repeats and low complexity sequences in mobile genetic elements, including plasmids and phages make their analysis very difficult when using NGS data.
 
 Here, we developed a new pipeline combining magiBlast, Circos and Eutils to identify and visualize whole or partial plasmid sequences present within SRA data.
 
 The output is in the form of self-explanatory tables or png images generated using Circos modules.
 
- 
- ## Visualization using Circos
- 
- Contigs from same SRA dataset mapped against 3 different S. aureus plasmids.
- Contigs are represented in the first colored circle.
- Genes are in the second colored circled.
- Genes names and locus tag are indicated when available.
- 
- Plasmid present in SRA - 2 contigs (blue, pink):
- ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/AP003139.png)
- 
- Plasmid partially present:
- ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/GQ900377.1.png)
- 
- Plasmid absent in SRA - no contig homology:
- ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/GQ900379.1.png)
- 
-
-## Dependencies ###
+## Dependencies
 
 wget
 
