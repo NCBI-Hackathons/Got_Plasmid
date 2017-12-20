@@ -13,8 +13,19 @@ AIMS:
 - Differentiation between screening (nose swabs) and lesions
 - Building a rapid pipeline to differentiate between plasmids in these differential sites.  
 - Extending that to other bacterial species
-
- ## Outputs
+## Inputs
+ - gapless_genome_assemblies.txt 
+ 
+    tab delimited single column listing gapless genome assembly IDs saved as gapless_genome_assemblies.txt in  Got_plasmid/gapless_genomes/assembly_ID/ (see step 1 instruction to retreive those).
+ 
+ - accession_plasmids.txt 
+ 
+    tab delimited single column listing plasmid IDs saved as accession_plasmids.txt in Got_plasmid/plasmids/assembly_ID/ (see step 1 instruction to retreive those).
+    
+ - SRA_ID.txt
+    tab delimited single column listing SRR IDs from SRA saved as SRA_ID.txt in Got_plasmid/SRA/.
+ 
+## Outputs
  - SRA_got_plamid.csv
  
      column1: list of plasmids matching SRA contig sequences
