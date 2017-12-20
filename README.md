@@ -26,6 +26,7 @@
     git clone https://github.com/NCBI-Hackathons/Got_plasmid.git
     
 **wget**
+###________
    - For mac use Homebrew
    
     brew install wget
