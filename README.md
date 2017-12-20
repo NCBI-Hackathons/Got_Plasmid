@@ -23,6 +23,7 @@ AIMS:
     tab delimited single column listing plasmid IDs saved as accession_plasmids.txt in Got_plasmid/plasmids/assembly_ID/ (see step 1 instruction to retreive those).
     
  - SRA_ID.txt
+ 
     tab delimited single column listing SRR IDs from SRA saved as SRA_ID.txt in Got_plasmid/SRA/.
  
 ## Outputs
