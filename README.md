@@ -1,66 +1,16 @@
 # Got Plasmids?
-## (or phages, repetitive elements or polintons?)
 
 ## Goal
-Retreive and visualize plasmid sequences from SRA and NGS data.
+Retreive and visualize plasmid sequences from SRA and Next Generation Sequencing (NGS) data.
+
 
 ## Challenge: 
-Identify plasmids using Next generation sequencing  and SRA data.
-Mobile genetic elements, including plasmids and phages, are ambiguous as rich in repeats and low complexity sequences.
+Repeats and low complexity sequences in mobile genetic elements, including plasmids and phages make their analysis very difficult when using NGS data.
 
-AIMS:
-- Identification of unique plasmids in individual patient samples
-- Differentiation between screening (nose swabs) and lesions
-- Building a rapid pipeline to differentiate between plasmids in these differential sites.  
-- Extending that to other bacterial species
-## Inputs
- - gapless_genome_assemblies.txt 
- 
-    tab delimited single column listing gapless genome assembly IDs saved as gapless_genome_assemblies.txt in  Got_plasmid/gapless_genomes/assembly_ID/ (see step 1 instruction to retreive those).
- 
- - accession_plasmids.txt 
- 
-    tab delimited single column listing plasmid IDs saved as accession_plasmids.txt in Got_plasmid/plasmids/assembly_ID/ (see step 1 instruction to retreive those).
-    
- - SRA_ID.txt
- 
-    tab delimited single column listing SRR IDs from SRA saved as SRA_ID.txt in Got_plasmid/SRA/.
- 
-## Outputs
- - SRA_got_plamid.csv
- 
-     column1: list of plasmids matching SRA contig sequences
-     
-     column2: size of plasmids
-     
-     column3: number of SRA contigs overlapping identified plasmids
-     
-     column4: % of plasmid sequence covered by SRA contigs (100 = the entire plasmid sequence is found in SRA sequence)
-   
- - SRA_contig_vs_genomes.csv
- 
-     table with the blast result of each contig against all tested gapless genome sequences
-   
- - SRA_contig_cross_table.csv
- 
-     matrix of cross matching contigs. (0 = not matching; 1= close to perfect match)
-   
- - SRA_summary_table.csv
- 
-     column1: list of plasmids matching SRA contig sequences (SRA_plasmidID)
-     
-     column2: list of all SRA contigs (SRA_plasmidID contig#)
-     
-     column3: number of additional contigs from other plasmids matching SRA contig sequence
-     
-     column4: number of additional plasmid matching SRA contig sequence
-     
-     columnV#: additional plasmid ID matching SRA contig sequence
-   
- - SRA_plasmidID.png
- 
-     Cicors representation of plasmid matching SRA contig sequences
- 
+Here, we developed a new pipeline combining magiBlast, Circos and Eutils to identify and visualize whole or partial plasmid sequences present within SRA data.
+
+The output is in the form of self-explanatory tables or png images generated using Circos modules.
+
  
  ## Visualization using Circos
  
@@ -94,6 +44,57 @@ Perl
 Circos
 
 R
+
+
+## Inputs
+ - gapless_genome_assemblies.txt 
+ 
+    tab delimited single column listing gapless genome assembly IDs saved as gapless_genome_assemblies.txt in  Got_plasmid/gapless_genomes/assembly_ID/ (see step 1 instruction to retrieve those).
+ 
+ - accession_plasmids.txt 
+ 
+    tab delimited single column listing plasmid IDs saved as accession_plasmids.txt in Got_plasmid/plasmids/assembly_ID/ (see step 1 instruction to retrieve those).
+    
+ - SRA_ID.txt
+ 
+    tab delimited single column listing SRR IDs from SRA saved as SRA_ID.txt in Got_plasmid/SRA/.
+
+## Outputs
+ - SRA_got_plamid.csv
+ 
+     column1: list of plasmids matching SRA contig sequences
+     
+     column2: size of plasmids
+     
+     column3: number of SRA contigs overlapping identified plasmids
+     
+     column4: % of plasmid sequence covered by SRA contigs (100 = the entire plasmid sequence is found in SRA sequence)
+   
+ - SRA_contig_vs_genomes.csv
+ 
+     table with the blast result of each contig against all tested gapless genome sequences
+   
+ - SRA_contig_cross_table.csv
+ 
+     matrix of cross matching contigs. (0 = not matching; 1= close to perfect match)
+   
+ - SRA_summary_table.csv
+ 
+     column1: list of plasmids matching SRA contig sequences (SRA_plasmidID)
+     
+     column2: list of all SRA contigs (SRA_plasmidID contig#)
+     
+     column3: number of additional contigs from other plasmids matching SRA contig sequence
+     
+     column4: number of additional plasmid matching SRA contig sequence
+     
+     columnV#: additional plasmid ID matching SRA contig sequence
+   
+ - SRA_plasmidID.png
+ 
+     Circos representation of plasmid matching SRA contig sequences
+ 
+
 
 ## Setup ###
    - Open terminal or connect to server
@@ -255,7 +256,7 @@ R
 
 ### Step 3. 
 # ------------------
-      # Retreive plasmid fasta with eUtils.
+      # Retrieve plasmid fasta with eUtils.
       # creates plasmid fasta sequences in plasmids/fasta
 
       # from NCBI website, go to Nucleotide database:
@@ -406,7 +407,7 @@ R
 # ==============
 
 
-## Backgound and Significance
+## Case Study
 ### Staphylococcus aureus genomes and mobile genetic elements (MGE).
 The proliferation of S. aureus genomic sequences in public databases reflects strong interest in understanding S. aureus genome diversity and evolution. With an average of 2,800 coding sequences, it is estimated that 44% of S. aureus genes are NOT shared by all S. aureus strains. These genes constitute the  ‘accessory genome’, which is variable between strains and mostly made of mobile genetic elements (MGE) enriched in hypothetical proteins. 
 
