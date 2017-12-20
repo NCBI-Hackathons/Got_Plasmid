@@ -14,6 +14,30 @@ AIMS:
 - Building a rapid pipeline to differentiate between plasmids in these differential sites.  
 - Extending that to other bacterial species
 
+ ## Outputs
+   - SRA_got_plamid.csv
+     column1: list of plasmids matching SRA contig sequences
+     column2: size of plasmids
+     column3: number of SRA contigs overlapping identified plasmid
+     column4: % of plasmid sequence covered by SRA contigs (100 = the entire plasmid sequence is found in SRA sequence)
+   
+   - SRA_contig_vs_genomes.csv
+     table with the blast result of each contig against all tested gapless genome sequences
+   
+   - SRA_contig_cross_table.csv
+     matrix of cross matching contigs. (0 = not matching; 1= close to perfect match)
+   
+   _ SRA_summary_table.csv
+     column1: list of plasmids matching SRA contig sequences (SRA_plasmidID)
+     column2: list of all SRA contigs (SRA_plasmidID contig#)
+     column3: number of additional contigs from other plasmids matching SRA contig sequence
+     column4: number of additional plasmid matching SRA contig sequence
+     columnV#: additional plasmid ID matching SRA contig sequence
+   
+   _ SRA_plasmidID.png
+     Cicors representation of plasmid matching SRA contig sequences
+ 
+ 
  ## Visualization using Circos
  
  Contigs from same SRA dataset mapped against 3 different S. aureus plasmids.
@@ -123,7 +147,8 @@ R
     ./configure --prefix=$HOME/R 
     make && make install 
     export PATH=$PATH:$HOME/R/bin
-     
+    
+ ###R_modules###
     R
     source("https://bioconductor.org/biocLite.R")
     biocLite("GenomicRanges")
@@ -158,6 +183,8 @@ R
 ### Step 1.
 # ------------------
       # Extract all genomic gapless genome fasta and gff.
+      # creates gapless_genome_plasmid.fasta in gapless_genomes/fasta/
+      # creates individual gff files for gapless genome sequences in gapless_genomes/gff/
 
       # from NCBI website, go to Assembly database:
       # staphylococcus aureus[Organism] 
@@ -194,6 +221,8 @@ R
 ### Step 2. 
 # ------------------
       # Remove plasmid sequences from genomes.
+      # generates extra_plasmids.fasta in plasmids/fasta/
+      # generates gapless_genomes.fasta in gapless_genomes/fasta/
 
       ## ***command line***
       ## cd Path_to/Got_plasmid/
@@ -203,6 +232,7 @@ R
 ### Step 3. 
 # ------------------
       # Retreive plasmid fasta with eUtils.
+      # creates plasmid fasta sequences in plasmids/fasta
 
       # from NCBI website, go to Nucleotide database:
       # plasmid[title] AND staphylococcus[title]
@@ -224,6 +254,7 @@ R
 ### Step 4. 
 # ------------------
       # Create customized blast databases.
+      # creates makeblastdb_gapless_genomes.sh scripts in /plasmids/fasta/
 
       ## ***command line***
       ## cd Path_to/Got_plasmid/gapless_genomes/fasta/
@@ -240,6 +271,7 @@ R
 ### Step 5. 
 # ------------------
       # Use magicBlast on one SRRA versus individual plasmid databases.
+      # creates magicBlast output files in plasmids/magic_output/
 
       ## ***command line***
       ## cd Path_to/Got_plasmid/
@@ -254,6 +286,8 @@ R
 ### Step 6. 
 # ------------------
       # Create individual contig.fasta files and generate a table with the % of plasmid sequences covered by contigs.
+      # create contig sequences in contig/
+      # create SRA_got_plamid.csv in outputs/
 
       ## ***command line***
       ## cd Path_to/Got_plasmid/
@@ -264,6 +298,7 @@ R
 ### Step 7. 
 # ------------------
       # Download and parse plasmid GenBank genome files.
+      # generates all_plasmids_GenBank.txt in plasmids/genBank/
       
       ## ***command line***
       ## cd Path_to/Got_plasmid/
@@ -274,6 +309,7 @@ R
 ### Step 8. 
 # ------------------
       # Generate plasmid and contig visualization using Circos.
+      # generates plasmid.png files in outputs/.
       
       ## ***command line***
       ## cd Path_to/Got_plasmid/
@@ -289,6 +325,8 @@ R
 ### Step 9. 
 # ------------------
       # Create customized contig db and blast contigs reciprocally.
+      # creates Formatblast_contigs.sh script in /plasmids/contigs/
+      # creates reciprocal_contig_Blast.sh script in /plasmids/contigs/
 
       ## ***command line***
       ## cd Path_to/Got_plasmid/
@@ -304,6 +342,8 @@ R
 ### Step 10. 
 # ------------------
       # Identify contigs matching each other and other plasmids.
+      # generates SRA_summary_table.csv in outputs/.
+      # generates SRA_contig_cross_table.csv in outputs/.
 
       ## ***command line***
       ## cd Path_to/Got_plasmid/
@@ -314,6 +354,7 @@ R
 ### Step 11. 
 # ------------------
       # BLAST contigs against gapless genome databases.
+      # creates blast_contigs_vs_gapless_genomes.sh script in /plasmids/contigs/
       
       ## ***command line***
       ## cd Path_to/Got_plasmid/
@@ -329,6 +370,8 @@ R
 ### Step 12. 
 # ------------------
       # Identify contigs matching gapless genome sequences.
+      # format genome.gff files in usable genome_Gff.csv in gapless_genomes/gff/
+      # generates SRA_contig_vs_genomes.csv in outputs/
     
       ## ***command line***
       ## cd Path_to/Got_plasmid/
