@@ -15,26 +15,26 @@ AIMS:
 - Extending that to other bacterial species
 
  ## Outputs
-   - SRA_got_plamid.csv
+ _ SRA_got_plamid.csv
      column1: list of plasmids matching SRA contig sequences
      column2: size of plasmids
      column3: number of SRA contigs overlapping identified plasmid
      column4: % of plasmid sequence covered by SRA contigs (100 = the entire plasmid sequence is found in SRA sequence)
    
-   - SRA_contig_vs_genomes.csv
+ _ SRA_contig_vs_genomes.csv
      table with the blast result of each contig against all tested gapless genome sequences
    
-   - SRA_contig_cross_table.csv
+ _ SRA_contig_cross_table.csv
      matrix of cross matching contigs. (0 = not matching; 1= close to perfect match)
    
-   _ SRA_summary_table.csv
+ _ SRA_summary_table.csv
      column1: list of plasmids matching SRA contig sequences (SRA_plasmidID)
      column2: list of all SRA contigs (SRA_plasmidID contig#)
      column3: number of additional contigs from other plasmids matching SRA contig sequence
      column4: number of additional plasmid matching SRA contig sequence
      columnV#: additional plasmid ID matching SRA contig sequence
    
-   _ SRA_plasmidID.png
+ _ SRA_plasmidID.png
      Cicors representation of plasmid matching SRA contig sequences
  
  
