@@ -18,15 +18,15 @@ Repeats and low complexity sequences in mobile genetic elements, including plasm
 6. Circos
 7. R
 ### Inputs
-* gapless_genome_assemblies.txt 
+**gapless_genome_assemblies.txt 
  
     tab delimited single column listing gapless genome assembly IDs saved as gapless_genome_assemblies.txt in  Got_plasmid/gapless_genomes/assembly_ID/ (see step 1 instruction to retrieve those).
  
-* accession_plasmids.txt 
+**accession_plasmids.txt 
  
     tab delimited single column listing plasmid IDs saved as accession_plasmids.txt in Got_plasmid/plasmids/assembly_ID/ (see step 1 instruction to retrieve those).
     
-* SRA_ID.txt
+**SRA_ID.txt
  
     tab delimited single column listing SRR IDs from SRA saved as SRA_ID.txt in Got_plasmid/SRA/.
 
