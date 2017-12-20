@@ -3,6 +3,7 @@
  ## Table of Contents
 * [Intro](https://github.com/NCBI-Hackathons/Got_Plasmid.git#intro)
 * [Help](https://github.com/NCBI-Hackathons/Got_Plasmid.git#Help)
+* [WorkFlow](https://github.com/NCBI-Hackathons/Got_Plasmid.git#WorkFlow)
 ## Intro
 ### Goal
 Retreive and visualize plasmid sequences from SRA and Next Generation Sequencing (NGS) data.
@@ -31,7 +32,7 @@ Repeats and low complexity sequences in mobile genetic elements, including plasm
     tab delimited single column listing SRR IDs from SRA saved as SRA_ID.txt in Got_plasmid/SRA/.
 
 ### Outputs
- - SRA_got_plamid.csv
+**SRA_got_plamid.csv**
  
      column1: list of plasmids matching SRA contig sequences
      
@@ -41,15 +42,15 @@ Repeats and low complexity sequences in mobile genetic elements, including plasm
      
      column4: % of plasmid sequence covered by SRA contigs (100 = the entire plasmid sequence is found in SRA sequence)
    
- - SRA_contig_vs_genomes.csv
+**SRA_contig_vs_genomes.csv**
  
      table with the blast result of each contig against all tested gapless genome sequences
    
- - SRA_contig_cross_table.csv
+**SRA_contig_cross_table.csv**
  
      matrix of cross matching contigs. (0 = not matching; 1= close to perfect match)
    
- - SRA_summary_table.csv
+**SRA_summary_table.csv**
  
      column1: list of plasmids matching SRA contig sequences (SRA_plasmidID)
      
@@ -61,23 +62,23 @@ Repeats and low complexity sequences in mobile genetic elements, including plasm
      
      columnV#: additional plasmid ID matching SRA contig sequence
    
- - SRA_plasmidID.png
+**SRA_plasmidID.png**
  
      Circos representation of plasmid matching SRA contig sequences
  
 
 
-## Setup ###
+### Setup
    - Open terminal or connect to server
     
     git clone https://github.com/NCBI-Hackathons/Got_plasmid.git
     
-###wget###
+**wget**
    - For mac use Homebrew
    
     brew install wget
     
-###EDirect###
+**EDirect**
    - From https://www.ncbi.nlm.nih.gov/books/NBK179288/
  
     cd ~
@@ -93,7 +94,7 @@ Repeats and low complexity sequences in mobile genetic elements, including plasm
     ./edirect/setup.sh
     echo "export PATH=\$PATH:\$HOME/edirect" >> $HOME/.bash_profile
     
-###BLAST###
+**BLAST**
    - Download system compatible BLAST version.
   For MAC:
   
@@ -104,14 +105,14 @@ Repeats and low complexity sequences in mobile genetic elements, including plasm
   
     $export BLASTDB=$<path_to>/blastdb
  
-###magicBLAST###
+**magicBLAST**
    - Download system compatible magicBLAST version.
   For MAC:
     
     wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/magicblast/LATEST/ncbi-magicblast-1.3.0.dmg
     export PATH=$PATH:$<Path_to>/ncbi-magicblast-1.3.0/bin/
 
-###CIRCOS###
+**CIRCOS**
    - Circos runs in perl
     
     cd <Path_to>/Got_plasmid/circos/
@@ -132,7 +133,7 @@ Repeats and low complexity sequences in mobile genetic elements, including plasm
     For other machines, read instructions: http://circos.ca/documentation/tutorials/configuration/perl_and_modules/
     Check again to make sure: perl -Mlocal::lib circos-0.69-6/bin/circos -modules
 
-###R###
+**R**
    - Install R locally
    
     cd Path_to/Got_plasmid/
@@ -144,7 +145,7 @@ Repeats and low complexity sequences in mobile genetic elements, including plasm
     make && make install 
     export PATH=$PATH:$HOME/R/bin
     
- ###R_modules###
+**R_modules**
     R
     source("https://bioconductor.org/biocLite.R")
     biocLite("GenomicRanges")
@@ -171,9 +172,6 @@ Repeats and low complexity sequences in mobile genetic elements, including plasm
  10. Identify contigs matching each other and other plasmids.
  11. BLAST contigs against gapless genome databases.
  12. Identify contigs matching gapless genome sequences.
-
-
-## STEPS 
 
 
 ### Step 1.
