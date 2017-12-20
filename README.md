@@ -2,7 +2,7 @@
 ## (or phages, repetitive elements or polintons?)
 
 ## Goal
-Defining the clinically relevant plasmids of Staphylococcus aureus and other pathogenic bacteria.
+Retreive and visualize plasmid sequences from SRA and NGS data.
 
 ## Challenge: 
 Identify plasmids using Next generation sequencing  and SRA data.
