@@ -3,6 +3,8 @@
  ## Table of Contents
 * [Intro](https://github.com/NCBI-Hackathons/Got_Plasmid.git#intro)
 * [Help](https://github.com/NCBI-Hackathons/Got_Plasmid.git#Help)
+* [Inputs](https://github.com/NCBI-Hackathons/Got_Plasmid.git#Inputs)
+* [Outputs](https://github.com/NCBI-Hackathons/Got_Plasmid.git#Outputs)
 * [WorkFlow](https://github.com/NCBI-Hackathons/Got_Plasmid.git#WorkFlow)
 ## Intro
 ### Goal
@@ -18,56 +20,6 @@ Repeats and low complexity sequences in mobile genetic elements, including plasm
 5. Perl
 6. Circos
 7. R
-### Inputs
-**gapless_genome_assemblies.txt** 
- 
-    tab delimited single column listing gapless genome assembly IDs saved as gapless_genome_assemblies.txt in  Got_plasmid/gapless_genomes/assembly_ID/ (see step 1 instruction to retrieve those).
- 
-**accession_plasmids.txt** 
- 
-    tab delimited single column listing plasmid IDs saved as accession_plasmids.txt in Got_plasmid/plasmids/assembly_ID/ (see step 1 instruction to retrieve those).
-    
-**SRA_ID.txt**
- 
-    tab delimited single column listing SRR IDs from SRA saved as SRA_ID.txt in Got_plasmid/SRA/.
-
-### Outputs
-**SRA_got_plamid.csv**
- 
-     column1: list of plasmids matching SRA contig sequences
-     
-     column2: size of plasmids
-     
-     column3: number of SRA contigs overlapping identified plasmids
-     
-     column4: % of plasmid sequence covered by SRA contigs (100 = the entire plasmid sequence is found in SRA sequence)
-   
-**SRA_contig_vs_genomes.csv**
- 
-     table with the blast result of each contig against all tested gapless genome sequences
-   
-**SRA_contig_cross_table.csv**
- 
-     matrix of cross matching contigs. (0 = not matching; 1= close to perfect match)
-   
-**SRA_summary_table.csv**
- 
-     column1: list of plasmids matching SRA contig sequences (SRA_plasmidID)
-     
-     column2: list of all SRA contigs (SRA_plasmidID contig#)
-     
-     column3: number of additional contigs from other plasmids matching SRA contig sequence
-     
-     column4: number of additional plasmid matching SRA contig sequence
-     
-     columnV#: additional plasmid ID matching SRA contig sequence
-   
-**SRA_plasmidID.png**
- 
-     Circos representation of plasmid matching SRA contig sequences
- 
-
-
 ### Setup
    - Open terminal or connect to server
     
@@ -157,6 +109,54 @@ Repeats and low complexity sequences in mobile genetic elements, including plasm
     install.packages("biofiles")
     devtools::install_github("gschofl/biofiles")
 
+## Inputs
+**gapless_genome_assemblies.txt** 
+ 
+    tab delimited single column listing gapless genome assembly IDs saved as gapless_genome_assemblies.txt in  Got_plasmid/gapless_genomes/assembly_ID/ (see step 1 instruction to retrieve those).
+ 
+**accession_plasmids.txt** 
+ 
+    tab delimited single column listing plasmid IDs saved as accession_plasmids.txt in Got_plasmid/plasmids/assembly_ID/ (see step 1 instruction to retrieve those).
+    
+**SRA_ID.txt**
+ 
+    tab delimited single column listing SRR IDs from SRA saved as SRA_ID.txt in Got_plasmid/SRA/.
+
+## Outputs
+**SRA_got_plamid.csv**
+ 
+     column1: list of plasmids matching SRA contig sequences
+     
+     column2: size of plasmids
+     
+     column3: number of SRA contigs overlapping identified plasmids
+     
+     column4: % of plasmid sequence covered by SRA contigs (100 = the entire plasmid sequence is found in SRA sequence)
+   
+**SRA_contig_vs_genomes.csv**
+ 
+     table with the blast result of each contig against all tested gapless genome sequences
+   
+**SRA_contig_cross_table.csv**
+ 
+     matrix of cross matching contigs. (0 = not matching; 1= close to perfect match)
+   
+**SRA_summary_table.csv**
+ 
+     column1: list of plasmids matching SRA contig sequences (SRA_plasmidID)
+     
+     column2: list of all SRA contigs (SRA_plasmidID contig#)
+     
+     column3: number of additional contigs from other plasmids matching SRA contig sequence
+     
+     column4: number of additional plasmid matching SRA contig sequence
+     
+     columnV#: additional plasmid ID matching SRA contig sequence
+   
+**SRA_plasmidID.png**
+ 
+     Circos representation of plasmid matching SRA contig sequences
+ 
 
 ## WorkFlow
 
