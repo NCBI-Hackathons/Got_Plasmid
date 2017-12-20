@@ -4,24 +4,16 @@
  ## Table of Contents
 
 * [Intro](https://github.com/NCBI-Hackathons/Got_Plasmid.git#intro)
-* [Dependencies](https://github.com/NCBI-Hackathons/Got_Plasmid.git#Dependencies)
-* [Inputs](https://github.com/NCBI-Hackathons/Got_Plasmid.git#Inputs)
-* [Outputs](https://github.com/NCBI-Hackathons/Got_Plasmid.git#Outputs)
-
+* [Help](https://github.com/NCBI-Hackathons/Got_Plasmid.git#Help)
 
 ## Intro
 ### Goal
 Retreive and visualize plasmid sequences from SRA and Next Generation Sequencing (NGS) data.
+### Challenges: 
+Repeats and low complexity sequences in mobile genetic elements, including plasmids and phages make their analysis very difficult when using NGS data. Here, we developed a new pipeline combining magiBlast, Circos and Eutils to identify and visualize whole or partial plasmid sequences present within SRA data. The output is in the form of self-explanatory tables or png images generated using Circos modules.
 
-### Challenge: 
-Repeats and low complexity sequences in mobile genetic elements, including plasmids and phages make their analysis very difficult when using NGS data.
-
-Here, we developed a new pipeline combining magiBlast, Circos and Eutils to identify and visualize whole or partial plasmid sequences present within SRA data.
-
-The output is in the form of self-explanatory tables or png images generated using Circos modules.
-
-## Dependencies
-
+## Help
+### Dependencies
 1. wget
 2. magicBlast
 3. Blast
@@ -29,21 +21,20 @@ The output is in the form of self-explanatory tables or png images generated usi
 5. Perl
 6. Circos
 7. R
-
-## Inputs
- * gapless_genome_assemblies.txt 
+### Inputs
+* gapless_genome_assemblies.txt 
  
     tab delimited single column listing gapless genome assembly IDs saved as gapless_genome_assemblies.txt in  Got_plasmid/gapless_genomes/assembly_ID/ (see step 1 instruction to retrieve those).
  
- * accession_plasmids.txt 
+* accession_plasmids.txt 
  
     tab delimited single column listing plasmid IDs saved as accession_plasmids.txt in Got_plasmid/plasmids/assembly_ID/ (see step 1 instruction to retrieve those).
     
- * SRA_ID.txt
+* SRA_ID.txt
  
     tab delimited single column listing SRR IDs from SRA saved as SRA_ID.txt in Got_plasmid/SRA/.
 
-## Outputs
+### Outputs
  - SRA_got_plamid.csv
  
      column1: list of plasmids matching SRA contig sequences
