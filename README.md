@@ -1,17 +1,13 @@
 # Got Plasmids?
 ![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/got_plasmid.png)
- 
  ## Table of Contents
-
 * [Intro](https://github.com/NCBI-Hackathons/Got_Plasmid.git#intro)
 * [Help](https://github.com/NCBI-Hackathons/Got_Plasmid.git#Help)
-
 ## Intro
 ### Goal
 Retreive and visualize plasmid sequences from SRA and Next Generation Sequencing (NGS) data.
 ### Challenges: 
 Repeats and low complexity sequences in mobile genetic elements, including plasmids and phages make their analysis very difficult when using NGS data. Here, we developed a new pipeline combining magiBlast, Circos and Eutils to identify and visualize whole or partial plasmid sequences present within SRA data. The output is in the form of self-explanatory tables or png images generated using Circos modules.
-
 ## Help
 ### Dependencies
 1. wget
