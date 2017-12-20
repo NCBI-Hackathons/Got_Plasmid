@@ -1,5 +1,6 @@
 # Got Plasmids?
-
+![My image](https://github.com/NCBI-Hackathons/Pathogenic_Pangenomes/blob/master/images/got_plasmid.png)
+ 
 ## Goal
 Retreive and visualize plasmid sequences from SRA and Next Generation Sequencing (NGS) data.
 
