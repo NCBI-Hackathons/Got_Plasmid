@@ -25,10 +25,9 @@ for (sr in 1:length(SRA_names)) {
 setwd("plasmids/contigs/")
 SRA = SRA_names[sr]
 
-
-
 contig_files = list.files(pattern = SRA)
-contig_names = sapply(contig_files, 
+contigs_fasta <- contig_files[-grep("fasta.", contig_files)]
+contig_names = sapply(contigs_fasta, 
                       function(s) {s = gsub("_matching_contigs.fasta", "", s)})
 
 

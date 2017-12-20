@@ -413,5 +413,23 @@ for (sr in 1:length(SRA_names)) {
       cat(paste("perl -Mlocal::lib ../../bin/circos -conf ", paste(SRA_names[sr],"-",my_save_sh[i], ".conf", sep = ""), " -outputfile ", paste(SRA_names[sr],"_",my_save_sh[i], sep= ""), sep = ""),sep="\n",file=Script_locallib,append=TRUE)  
     }
 }
+cat(paste("mv *.png ../../../../outputs/."),sep="\n",file=Script_locallib,append=TRUE)
+setwd("../../../../")
 
+#--------- create  Circos.sh for perl using perlbrew
+setwd("circos/circos-0.69-6/circos_plasmid/conf/")
+my_save_sh <- list.files(pattern = "\\_highlights.conf")
+my_save_sh <- sapply(my_save_sh, function(x) gsub(".*-","",x))
+my_save_sh <- sapply(my_save_sh, function(x) gsub("_highlights.conf","",x))
+my_save_sh <- unique(my_save_sh)
+
+Script_locallib  = "perl_perlbrew_circos.sh"
+cat(paste("#!/bin/bash"),sep="\n",file=Script_locallib,append=TRUE)
+
+for (sr in 1:length(SRA_names)) {
+  for (i in 1:length(my_save_sh)) {
+    cat(paste("perl ../../bin/circos -conf ", paste(SRA_names[sr],"-",my_save_sh[i], ".conf", sep = ""), " -outputfile ", paste(SRA_names[sr],"_",my_save_sh[i], sep= ""), sep = ""),sep="\n",file=Script_locallib,append=TRUE)  
+  }
+}
+cat(paste("mv *.png ../../../../outputs/."),sep="\n",file=Script_locallib,append=TRUE)
 setwd("../../../../")

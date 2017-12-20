@@ -47,7 +47,7 @@ gffRead <- function(gffFile, nrows = -1) {
 
 
 #--------- Extract gff information
-setwd("../../gapless_genomes/gff/")
+setwd("gapless_genomes/gff/")
 my_gff <- list.files(pattern = "\\.gff")
 my_genome_names <- gsub("_genomic.gff","",my_gff)
 my_genome_names <- gsub("1_.*","1",my_genome_names)
