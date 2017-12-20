@@ -98,6 +98,7 @@
     export PATH=$PATH:$HOME/R/bin
     
 **R_modules**
+
     R
     source("https://bioconductor.org/biocLite.R")
     biocLite("GenomicRanges")
