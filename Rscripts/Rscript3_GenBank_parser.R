@@ -62,9 +62,51 @@ df0 <- as.data.frame(plasmid_ranges, row.names = NULL)
 df1 <- as.data.frame(genes_ranges, row.names = NULL)
 df2 <- as.data.frame(CDS_ranges,row.names = NULL)
 df3 <- as.data.frame(tRNA_ranges,row.names = NULL)
-df <- rbind(df0, df1,df2,df3)
 
-save.list[[i]] <- df
+if(length(which(duplicated(names(genes_ranges[1:length(genes_ranges)])))) != 0){
+  x <- which(duplicated(names(genes_ranges[1:length(genes_ranges)])))
+  for(fs in 1:length(x)){
+    names(genes_ranges)[x[fs]] <- paste(names(genes_ranges)[x[fs]], "_duplicate",sep="")
+  }
+}
+
+if(length(which(duplicated(names(CDS_ranges[1:length(CDS_ranges)])))) != 0){
+  x <- which(duplicated(names(CDS_ranges[1:length(CDS_ranges)])))
+  for(fs in 1:length(x)){
+    names(CDS_ranges)[x[fs]] <- paste(names(CDS_ranges)[x[fs]], "_duplicate",sep="")
+  }
+}
+      
+if(ncol(df0) != ncol(df1)){
+  df1 <- as.data.frame(genes_ranges)
+  df1$locus_tag <- rownames(df1)
+  df1$gene <- NA
+  df1$protein_id <- NA
+  df1$product <- NA
+  df1$note <- NA
+  df1$old_locus_tag <- NA
+  df1$pseudo <- NA
+}
+
+if(ncol(df0) != ncol(df2)){
+  df2 <- as.data.frame(CDS_ranges)
+  df2$locus_tag <- rownames(df1)
+  df2$gene <- NA
+  df2$protein_id <- NA
+  df2$product <- NA
+  df2$note <- NA
+  df2$old_locus_tag <- NA
+  df2$pseudo <- NA
+}
+
+  
+  
+
+df <- rbind(df0, df1,df2)
+if(nrow(df3)>0){
+  df <- rbind(df, df3)
+}
+  save.list[[i]] <- df
 
 }
 
